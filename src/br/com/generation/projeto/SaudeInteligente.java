@@ -52,5 +52,7 @@ public class SaudeInteligente {
 			
 
 		}while(opcao != 0);	
+		
+		entrada.close();
 	}
 }
