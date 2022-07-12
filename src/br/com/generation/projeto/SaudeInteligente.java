@@ -32,7 +32,7 @@ public class SaudeInteligente {
 			
 				break;
 			
-			// Ajuda Diagnostico
+			// Diagnostico
 			case 2:
 				System.out.println("Bem vindo ao Diagnóstico");
 				
