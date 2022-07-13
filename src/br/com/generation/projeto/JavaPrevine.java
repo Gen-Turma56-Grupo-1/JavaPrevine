@@ -2,7 +2,7 @@ package br.com.generation.projeto;
 
 import java.util.Scanner;
 
-public class SaudeInteligente {
+public class JavaPrevine {
 
 	public static void main(String[] args) {
 
