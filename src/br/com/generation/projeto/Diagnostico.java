@@ -21,11 +21,13 @@ public class Diagnostico {
 		sintomas += quizSintomasGraves();
 		pontuacaoTotal = sintomas;
 		
-		if(pontuacaoTotal < 5) {
-			// colocar codigo
-		}
-		
-		return " // colocar o codigo";
+		if(pontuacaoTotal < 4 && pontuacaoTotal > 0)		
+			return "Você apresenta sintomas leves, caso piore, procure o médico!";
+		if(pontuacaoTotal >= 4 && pontuacaoTotal < 6) 
+			return "Você apresenta sintomas moderados fique atento e procure um médico caso não haja melhora!";
+		if(pontuacaoTotal >= 6)
+			return "Você apresenta sintomas graves, procure o médico o quanto antes!";
+		return "valor digitado invalido";
 	}
 	
 	public int quizSintomasLeves() {
