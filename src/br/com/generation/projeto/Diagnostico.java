@@ -30,11 +30,11 @@ public class Diagnostico {
 	public int quizSintomasLeves() {
 		
 		 do {
-	            System.out.println("Na ultima semana você apresentou quantos desses sintomas leves?");
+	            System.out.println("Na ultima semana voce apresentou quantos desses sintomas leves?");
 	            // cada sintoma equivale a +1 pontuação
 	            System.out.println("- Febre");
 	            System.out.println("- Tosse");
-	            System.out.println("- Cansaço");
+	            System.out.println("- Cansaco");
 	            System.out.println("- Perda de paladar ou olfato");
 
 	            System.out.print("Digite a quantidade de sintomas: ");
@@ -54,12 +54,12 @@ public class Diagnostico {
 		
 		do {
 			
-            System.out.println("Na ultima semana você apresentou quantos desses sintomas moderados?");
+            System.out.println("Na ultima semana voce apresentou quantos desses sintomas moderados?");
             System.out.println("- Dores de garganta");
-            System.out.println("- Dor de cabeça");
+            System.out.println("- Dor de cabeca");
             System.out.println("- Dores e desconfortos");
             System.out.println("- Diarreia");
-            System.out.println("- Irritações na pele ou descoloração dos dedos dos pés ou das mãos");
+            System.out.println("- Irritacoes na pele ou descoloracao dos dedos dos pes ou das maos");
             System.out.println("- Olhos vermelhos ou irritados");
 
             System.out.print("Digite a quantidade de sintomas: ");
