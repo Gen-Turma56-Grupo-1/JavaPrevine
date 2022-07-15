@@ -16,11 +16,11 @@ public class MenuPrincipal {
 		System.out.println("MENU - SISTEMA");
 
 		System.out.println("1 - Calculadora Covid");
-		System.out.println("2 - Diagnóstico");
+		System.out.println("2 - Diagnï¿½stico");
 		System.out.println("0 - Para sair");
-		System.out.print("Digite uma opção válida: ");
+		System.out.print("Digite uma opï¿½ï¿½o vï¿½lida: ");
 		this.opcao = entrada.nextInt();
-		
+		System.out.println();
 		return this.opcao;
 	}
 }

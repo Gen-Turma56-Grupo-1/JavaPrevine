@@ -9,7 +9,7 @@ public class CalculadoraCovid {
 	
 	
 	int a1 = 1;
-	double q = 0.98;
+	double q = 1.7;
 	double n;
 
 	private Scanner entrada;
@@ -25,46 +25,66 @@ public class CalculadoraCovid {
 		double q -> taxa de infeccao
 		double n -> numero de rodadas/periodo. 	
 	*/
-	public double contagio(int a1, double q, double n) {
+	public String contagio(int a1, double q, double n) {
 		double totalContagiados;
 		 
-		totalContagiados = a1*Math.pow(q, n);
+		if(q <= 1) {
+			totalContagiados = (a1*Math.pow(q, n)*n);
+			
+			return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
+		}else {
+			totalContagiados = (a1*Math.pow(q, n)*2)/3;
+			
+			return "o numero de novos contagiados: "+totalContagiados;
+		}
 		 
 		 
-		return totalContagiados;
 	}
 	
 	/*
-		soh pede o período
+		soh pede o perï¿½odo
 	*/
-	public double contagio(double n) {
+	public String contagio(double n) {
 		double totalContagiados;
 		 
-		totalContagiados = a1*Math.pow(q, n);
-		
+		if(q < 1) {
+			totalContagiados = (a1*Math.pow(q, n)*n);
+			
+			return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
+		}else {
+			totalContagiados = a1*Math.pow(q, n);
+			
+			return "o numero de infectados sera: "+totalContagiados;
+		}
 		 
-		return totalContagiados;
+		
 	}
 	
 	// pede quantidade de pessoas inicias e numero de periodos
-	public double contagio(int a1, double n) {
+	public String contagio(int a1, double n) {
 		double totalContagiados;
 		
-		totalContagiados = a1*Math.pow(q, n);
+		if(q < 1) {
+			totalContagiados = (a1*Math.pow(q, n) * n);
+			
+			return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
+			
+		}else {
+			totalContagiados = a1*Math.pow(q, n);
+			return "o numero de novos contagiados: "+totalContagiados;
+		}
 		
-		
-		return totalContagiados;
 	}
 	
 	public int menuCovid(){
 	
 		System.out.println("MENU - Calculadora Covid");
 		System.out.println("1 - *Quantas pessoas posso contaminar?");
-		System.out.println("2 - *N pessoas contaminam quantas pessoas em certo periodo?"); // --> usuário coloca a quantidade de pessoas infectadas inicial
-		System.out.println("3 - Faca seu próprio calculo");
+		System.out.println("2 - *N pessoas contaminam quantas pessoas em certo periodo?"); // --> usuï¿½rio coloca a quantidade de pessoas infectadas inicial
+		System.out.println("3 - Faca seu prï¿½prio calculo");
 		System.out.println("0 - Para voltar");
 		System.out.println("Observacao *  - os calculos sao feitos com dados retirados de: https://noticias.r7.com/saude/taxa-de-transmissao-da-covid-cai-no-brasil-aponta-imperial-college-29062022");
-		System.out.print("Digite uma opção válida: ");
+		System.out.print("Digite uma opï¿½ï¿½o vï¿½lida: ");
 		opcao = entrada.nextInt();
 
 		return opcao;
