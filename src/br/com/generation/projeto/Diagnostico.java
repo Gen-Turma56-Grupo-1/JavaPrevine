@@ -10,6 +10,7 @@ public class Diagnostico {
 	int sintomas = 0;
 	int pontuacaoTotal;
 	int pontuacao2;
+	int pontuacao3;
 	
 	private Scanner entrada;
 	
@@ -20,11 +21,13 @@ public class Diagnostico {
 		sintomas += quizSintomasGraves();
 		pontuacaoTotal = sintomas;
 		
-		if(pontuacaoTotal < 5) {
-			// colocar codigo
-		}
-		
-		return " // colocar o codigo";
+		if(pontuacaoTotal < 4 && pontuacaoTotal > 0)		
+			return "Você apresenta sintomas leves, caso piore, procure o médico!";
+		if(pontuacaoTotal >= 4 && pontuacaoTotal < 6) 
+			return "Você apresenta sintomas moderados fique atento e procure um médico caso não haja melhora!";
+		if(pontuacaoTotal >= 6)
+			return "Você apresenta sintomas graves, procure o médico o quanto antes!";
+		return "valor digitado invalido";
 	}
 	
 	public int quizSintomasLeves() {
@@ -77,9 +80,24 @@ public class Diagnostico {
 	
 	public int quizSintomasGraves() {
 		
-		// colocar codigo aqui
+		 do {
+	            
+	            System.out.println("Na ultima semana você apresentou quantos desses sintomas graves?");
+	            System.out.println("- Dificuldade para respirar ou falta de ar");
+	            System.out.println("- Perda da fala, mobilidade ou confusão");
+	            System.out.println("- Dores no peito");
+
+	            System.out.print("Digite digite a quantidade de sintomas: ");
+
+	            sintomas = entrada.nextInt();
+	            pontuacao3 = sintomas * 6;
+	            pontuacaoTotal += pontuacao3;
+	            if (sintomas > 3) {
+	                System.out.println("\n" + "Erro. Digite novamente!" + "\n");
+	            }
+	        } while (sintomas > 3);
 		
-		return 0;
+		return pontuacao3;
 	}
 
 }
