@@ -12,13 +12,15 @@ public class MenuPrincipal {
 	}
 	
 	public int menuPrincipal(){
-		
-		System.out.println("MENU - SISTEMA");
 
-		System.out.println("1 - Calculadora Covid");
-		System.out.println("2 - Diagnóstico");
-		System.out.println("0 - Para sair");
-		System.out.print("Digite uma opção válida: ");
+		System.out.println(" ________________________________________");
+		System.out.println("| 		       JAVA PREVINE		     	 |");
+		System.out.println("|  					                     |");
+		System.out.println("| 		1. Calculadora Covid	         |");
+		System.out.println("|       2. Diagnostico		             |");
+		System.out.println("|       0. Para sair		             |");
+		System.out.println("|________________________________________|");
+		System.out.print(" Digite uma opÃ§Ã£o vÃ¡lida: ");
 		this.opcao = entrada.nextInt();
 		
 		return this.opcao;
