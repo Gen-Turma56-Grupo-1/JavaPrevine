@@ -49,6 +49,8 @@ public class JavaPrevine {
 
 						resultado = calculadora.contagio(infectadosInicial, periodo);
 						System.out.println(resultado);
+						
+						break;
 
 					case 3:
 						System.out.println("\nFaca seu pr�prio calculo");
