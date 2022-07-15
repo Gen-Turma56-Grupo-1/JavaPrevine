@@ -28,9 +28,25 @@ public class Diagnostico {
 	
 	public int quizSintomasLeves() {
 		
+		 do {
+	            System.out.println("Na ultima semana você apresentou quantos desses sintomas leves?");
+	            // cada sintoma equivale a +1 pontuação
+	            System.out.println("- Febre");
+	            System.out.println("- Tosse");
+	            System.out.println("- Cansaço");
+	            System.out.println("- Perda de paladar ou olfato");
+
+	            System.out.print("Digite a quantidade de sintomas: ");
+	            sintomas = entrada.nextInt();
+	            pontuacaoTotal = sintomas;
+	            if (pontuacaoTotal > 4) {
+	                System.out.println("\n" + "Erro. Digite novamente!" + "\n");
+	            }
+	        } while (pontuacaoTotal > 4);
+		
 		// colocar codigo aqui
 		
-		return 0;
+		return pontuacaoTotal;
 	}
 	
 	public int quizSintomasModerados() {
