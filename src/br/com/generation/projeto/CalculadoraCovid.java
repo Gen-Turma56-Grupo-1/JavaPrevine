@@ -66,6 +66,7 @@ public class CalculadoraCovid {
         System.out.println("|   0. Faça seu próprio calculo		                           |");
         System.out.println("|______________________________________________________________|");
         System.out.print(" Digite uma opção válida: ");
+
 		opcao = entrada.nextInt();
         System.out.println("Observacao *  - os calculos sao feitos com dados retirados de: https://noticias.r7.com/saude/taxa-de-transmissao-da-covid-cai-no-brasil-aponta-imperial-college-29062022");
 

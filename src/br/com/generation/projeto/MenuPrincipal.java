@@ -22,7 +22,7 @@ public class MenuPrincipal {
 		System.out.println("|________________________________________|");
 		System.out.print(" Digite uma opção válida: ");
 		this.opcao = entrada.nextInt();
-		
+		System.out.println();
 		return this.opcao;
 	}
 }
