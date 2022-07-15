@@ -9,6 +9,7 @@ public class Diagnostico {
 	
 	int sintomas = 0;
 	int pontuacaoTotal;
+	int pontuacao2;
 	
 	private Scanner entrada;
 	
@@ -44,16 +45,34 @@ public class Diagnostico {
 	            }
 	        } while (pontuacaoTotal > 4);
 		
-		// colocar codigo aqui
+		
 		
 		return pontuacaoTotal;
 	}
 	
 	public int quizSintomasModerados() {
 		
-		// colocar codigo aqui
+		do {
+			
+            System.out.println("Na ultima semana você apresentou quantos desses sintomas moderados?");
+            System.out.println("- Dores de garganta");
+            System.out.println("- Dor de cabeça");
+            System.out.println("- Dores e desconfortos");
+            System.out.println("- Diarreia");
+            System.out.println("- Irritações na pele ou descoloração dos dedos dos pés ou das mãos");
+            System.out.println("- Olhos vermelhos ou irritados");
+
+            System.out.print("Digite a quantidade de sintomas: ");
+
+            sintomas = entrada.nextInt();
+            pontuacao2 = sintomas * 2;
+            pontuacaoTotal += pontuacao2;
+            if (sintomas > 6) {
+                System.out.println("\n" + "Erro. Digite novamente!" + "\n");
+            }
+        } while (sintomas > 6);
 		
-		return 0;
+		return pontuacao2;
 	}
 	
 	public int quizSintomasGraves() {
