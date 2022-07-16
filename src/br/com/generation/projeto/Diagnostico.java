@@ -35,11 +35,12 @@ public class Diagnostico {
 		
 		 do {
 	            System.out.println("Na ultima semana voce apresentou quantos desses sintomas leves?");
-	            // cada sintoma equivale a +1 pontuação
+	            System.out.println("__________________________________________________________________\n");
 	            System.out.println("- Febre");
 	            System.out.println("- Tosse");
 	            System.out.println("- Cansaco");
 	            System.out.println("- Perda de paladar ou olfato");
+	            System.out.println("\n__________________________________________________________________");
 
 	            System.out.print("Digite a quantidade de sintomas: ");
 	            sintomas = entrada.nextInt();
@@ -57,15 +58,18 @@ public class Diagnostico {
 	public int quizSintomasModerados() {
 		
 		do {
-			System.out.println();
+
+			System.out.println("__________________________________________________________________");
             System.out.println("\nNa ultima semana voce apresentou quantos desses sintomas moderados?");
+            System.out.println("__________________________________________________________________\n");
             System.out.println("- Dores de garganta");
             System.out.println("- Dor de cabeca");
             System.out.println("- Dores e desconfortos");
             System.out.println("- Diarreia");
             System.out.println("- Irritacoes na pele ou descoloracao dos dedos dos pes ou das maos");
             System.out.println("- Olhos vermelhos ou irritados");
-
+            System.out.println("__________________________________________________________________");
+            
             System.out.print("Digite a quantidade de sintomas: ");
 
             sintomas = entrada.nextInt();
@@ -82,13 +86,15 @@ public class Diagnostico {
 	public int quizSintomasGraves() {
 		
 		 do {
-	            System.out.println();
+			    System.out.println("__________________________________________________________________");
 	            System.out.println("\nNa ultima semana você apresentou quantos desses sintomas graves?");
+	            System.out.println	("__________________________________________________________________\n");
 	            System.out.println("- Dificuldade para respirar ou falta de ar");
 	            System.out.println("- Perda da fala, mobilidade ou confusão");
 	            System.out.println("- Dores no peito");
-
-	            System.out.print("Digite digite a quantidade de sintomas: ");
+	            System.out.println("__________________________________________________________________");
+	            
+	            System.out.print("\nDigite digite a quantidade de sintomas: ");
 
 	            sintomas = entrada.nextInt();
 	            pontuacao3 = sintomas * 6;

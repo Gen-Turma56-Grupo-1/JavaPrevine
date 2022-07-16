@@ -1,10 +1,11 @@
 package br.com.generation.projeto;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class JavaPrevine {
 
-	public static void main(String[] args) throws InterruptedException{
+	public static void main(String[] args) throws InterruptedException, IOException{
 		
 		
 		int opcao;
@@ -42,6 +43,8 @@ public class JavaPrevine {
 						
 						resultado = calculadora.contagio(periodo);
 						System.out.println(resultado);
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 
 						break;
 
@@ -54,6 +57,8 @@ public class JavaPrevine {
 
 						resultado = calculadora.contagio(infectadosInicial, periodo);
 						System.out.println(resultado);
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 						
 						break;
 
@@ -69,13 +74,15 @@ public class JavaPrevine {
 						resultado = calculadora.contagio(infectadosInicial, taxaInfeccao, periodo);
 						System.out.println(resultado);
 						System.out.println();
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 
 						break;
 
 					// Sair
 					case 0:
 
-						System.out.println("AUA FUI!");
+						System.out.println("Você saiu.");
 						
 
 						break;
@@ -93,15 +100,16 @@ public class JavaPrevine {
 			case 2:
 				menu.introducaoDiagnostico();
 				
-				System.out.println("Bem vindo ao Diagn�stico\n");
+				System.out.println("-Bem vindo ao Diagn�stico\n\n");
 				System.out.println(diagnostico.resultadoFinal());
-				
+				System.out.println("\nPressione enter para voltar ao inicio.");
+				System.in.read();
 				break;
 
 			// Sair
 			case 0:
 
-				System.out.println("AUA FUI!");
+				System.out.println("Você saiu.");
 
 				break;
 
