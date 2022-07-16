@@ -4,18 +4,23 @@ import java.util.Scanner;
 
 public class JavaPrevine {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws InterruptedException{
+		
+		
 		int opcao;
 		int infectadosInicial;
 		double taxaInfeccao;
 		double periodo;
 		String resultado;
 
+
 		Scanner entrada = new Scanner(System.in);
 		MenuPrincipal menu = new MenuPrincipal(entrada);
 		CalculadoraCovid calculadora = new CalculadoraCovid(entrada);
 		Diagnostico diagnostico = new Diagnostico(entrada);
+		
+		menu.introducao();
+		
 
 		// looping do programa
 		do {
