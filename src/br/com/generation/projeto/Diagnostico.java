@@ -14,6 +14,7 @@ public class Diagnostico {
 	
 	private Scanner entrada;
 	
+
 	
 	public String resultadoFinal() {
 		sintomas += quizSintomasLeves();
@@ -22,11 +23,11 @@ public class Diagnostico {
 		pontuacaoTotal = sintomas;
 		
 		if(pontuacaoTotal < 4 && pontuacaoTotal > 0)		
-			return "Você apresenta sintomas leves, caso piore, procure o médico!";
+			return "\nVocê apresenta sintomas leves, caso piore, procure o médico!";
 		if(pontuacaoTotal >= 4 && pontuacaoTotal < 6) 
-			return "Você apresenta sintomas moderados fique atento e procure um médico caso não haja melhora!";
+			return "\nVocê apresenta sintomas moderados fique atento e procure um médico caso não haja melhora!";
 		if(pontuacaoTotal >= 6)
-			return "Você apresenta sintomas graves, procure o médico o quanto antes!";
+			return "\nVocê apresenta sintomas graves, procure o médico o quanto antes!";
 		return "valor digitado invalido";
 	}
 	
@@ -56,8 +57,8 @@ public class Diagnostico {
 	public int quizSintomasModerados() {
 		
 		do {
-			
-            System.out.println("Na ultima semana voce apresentou quantos desses sintomas moderados?");
+			System.out.println();
+            System.out.println("\nNa ultima semana voce apresentou quantos desses sintomas moderados?");
             System.out.println("- Dores de garganta");
             System.out.println("- Dor de cabeca");
             System.out.println("- Dores e desconfortos");
@@ -81,8 +82,8 @@ public class Diagnostico {
 	public int quizSintomasGraves() {
 		
 		 do {
-	            
-	            System.out.println("Na ultima semana você apresentou quantos desses sintomas graves?");
+	            System.out.println();
+	            System.out.println("\nNa ultima semana você apresentou quantos desses sintomas graves?");
 	            System.out.println("- Dificuldade para respirar ou falta de ar");
 	            System.out.println("- Perda da fala, mobilidade ou confusão");
 	            System.out.println("- Dores no peito");

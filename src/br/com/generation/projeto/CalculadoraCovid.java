@@ -15,6 +15,9 @@ public class CalculadoraCovid {
     private Scanner entrada;
     private int opcao;
 
+    MenuPrincipal introducaoCalculadora = new MenuPrincipal(entrada);
+    
+    
     public CalculadoraCovid(Scanner entrada) {
         this.entrada = entrada;
 
@@ -76,7 +79,11 @@ public class CalculadoraCovid {
 
     }
 
-    public int menuCovid() {
+    public int menuCovid() throws InterruptedException {
+    	
+    	introducaoCalculadora.introducaoCalculadora();
+    	
+    	System.out.println("\n\n");
 
         System.out.println(" ______________________________________________________________");
         System.out.println("| 		           Calculadora Covid	                       |");
