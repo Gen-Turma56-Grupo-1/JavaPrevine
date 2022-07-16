@@ -91,8 +91,11 @@ public class JavaPrevine {
 
 			// Diagnostico
 			case 2:
-				System.out.println("Bem vindo ao Diagn�stico");
+				menu.introducaoDiagnostico();
+				
+				System.out.println("Bem vindo ao Diagn�stico\n");
 				System.out.println(diagnostico.resultadoFinal());
+				
 				break;
 
 			// Sair
