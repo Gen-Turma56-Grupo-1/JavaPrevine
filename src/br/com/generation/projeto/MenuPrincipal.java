@@ -115,6 +115,7 @@ public class MenuPrincipal {
 + " #####     ####     #####       ##   ##  ##    ####    ######      ###    ####     ####     ####\r\n"
 + "                            #####\r\n"
 + "");
+        		System.out.println("\n");
         		
 	}
 	
