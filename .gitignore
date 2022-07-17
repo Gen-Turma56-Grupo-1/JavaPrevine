@@ -4,5 +4,7 @@ bin/
 .settings
 .project
 .classpath
-.idea/misc.xml
+.idea/
 JavaPrevine.iml
+out/
+
