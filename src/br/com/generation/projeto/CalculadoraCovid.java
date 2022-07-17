@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class CalculadoraCovid {
 
-    // referencia:
-    // https://noticias.r7.com/saude/taxa-de-transmissao-da-covid-cai-no-brasil-aponta-imperial-college-29062022
-
 
     int a1 = 1;
     double q = 1.7;
@@ -16,8 +13,8 @@ public class CalculadoraCovid {
     private int opcao;
 
     MenuPrincipal introducaoCalculadora = new MenuPrincipal(entrada);
-    
-    
+
+
     public CalculadoraCovid(Scanner entrada) {
         this.entrada = entrada;
 
@@ -31,15 +28,10 @@ public class CalculadoraCovid {
     public String contagio(int a1, double q, double n) {
         double totalContagiados;
 
-        if(q <= 1) {
-            totalContagiados = (a1*Math.pow(q, n)*n);
 
-            return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
-        }else {
-            totalContagiados = (a1*Math.pow(q, n)*2)/3;
+        totalContagiados = (a1 * Math.pow(q, n));
 
-            return "o numero de novos contagiados: "+totalContagiados;
-        }
+        return "O n�mero de novos contagiados no final desse per�odo: " + totalContagiados;
 
 
     }
@@ -50,15 +42,10 @@ public class CalculadoraCovid {
     public String contagio(double n) {
         double totalContagiados;
 
-        if(q < 1) {
-            totalContagiados = (a1*Math.pow(q, n)*n);
 
-            return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
-        }else {
-            totalContagiados = a1*Math.pow(q, n);
+        totalContagiados = a1 * Math.pow(q, n);
 
-            return "o numero de infectados sera: "+totalContagiados;
-        }
+        return "O n�mero de contagiados no final desse per�odo: " + totalContagiados;
 
 
     }
@@ -67,36 +54,29 @@ public class CalculadoraCovid {
     public String contagio(int a1, double n) {
         double totalContagiados;
 
-        if(q < 1) {
-            totalContagiados = (a1*Math.pow(q, n) * n);
 
-            return "Voce tem essa chance de contaminar uma pessoa: "+totalContagiados;
+        totalContagiados = a1 * Math.pow(q, n);
+        return "O n�mero de novos contagiados no final desse per�odo: " + totalContagiados;
 
-        }else {
-            totalContagiados = a1*Math.pow(q, n);
-            return "o numero de novos contagiados: "+totalContagiados;
-        }
 
     }
 
     public int menuCovid() throws InterruptedException {
-    	
-    	introducaoCalculadora.introducaoCalculadora();
-    	
-    	System.out.println("\n\n");
 
-        System.out.println(" ______________________________________________________________");
-        System.out.println("| 		           Calculadora Covid	                       |");
-        System.out.println("|  							           	                       |");
-        System.out.println("| 	1. Quantas pessoas posso contaminar?	                   |");
-        System.out.println("|   2. N pessoas contaminam quantas pessoas em certo periodo?  |");
-        System.out.println("|   3. Faça seu próprio calculo		                           |");
-        System.out.println("|  	0. Sair						           	                   |");
-        System.out.println("|______________________________________________________________|");
-        System.out.print(" Digite uma opção válida: ");
+        introducaoCalculadora.introducaoCalculadora();
 
-		opcao = entrada.nextInt();
-        System.out.println("Observacao *  - os calculos sao feitos com dados retirados de: https://noticias.r7.com/saude/taxa-de-transmissao-da-covid-cai-no-brasil-aponta-imperial-college-29062022");
+        System.out.println("\n\n");
+
+        System.out.println("+-------------------------------------------------------------------------------+");
+        System.out.println("| 		                     CALCULADORA COVID	                                |");
+        System.out.println("| 	1. Quantas pessoas posso contaminar?	                                    |");
+        System.out.println("|   2. Adicione quantos casos iniciais e período para determinar os novos casos |");
+        System.out.println("|   3. Faça seu próprio calculo		                                            |");
+        System.out.println("|  	0. Sair						                                                |");
+        System.out.println("+-------------------------------------------------------------------------------+");
+        System.out.print("  Digite uma opção válida: ");
+
+        opcao = entrada.nextInt();
 
         return opcao;
     }
