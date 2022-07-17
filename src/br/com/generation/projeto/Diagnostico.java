@@ -3,6 +3,7 @@ package br.com.generation.projeto;
 import java.util.Scanner;
 
 public class Diagnostico {
+
     public Diagnostico(Scanner entrada) {
         this.entrada = entrada;
     }
@@ -79,6 +80,7 @@ public class Diagnostico {
             }
         } while (sintomas > 6);
 
+
         return pontuacao2;
     }
 
@@ -104,5 +106,4 @@ public class Diagnostico {
 
         return pontuacao3;
     }
-
 }

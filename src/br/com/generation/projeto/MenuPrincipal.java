@@ -101,6 +101,7 @@ public class MenuPrincipal {
         System.out.println();
 
         System.out.print(" #####      ##                                                    ##       ##\r\n"
+
                 + "  ## ##                                                           ##\r\n"
                 + "  ##  ##   ###      ####     ### ##  #####     ####     #####    #####    ###      ####     ####\r\n"
                 + "  ##  ##    ##         ##   ##  ##   ##  ##   ##  ##   ##         ##       ##     ##  ##   ##  ##\r\n");
@@ -154,6 +155,4 @@ public class MenuPrincipal {
 
 
     }
-
-
 }
