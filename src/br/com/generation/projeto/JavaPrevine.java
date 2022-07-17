@@ -1,21 +1,27 @@
 package br.com.generation.projeto;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class JavaPrevine {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws InterruptedException, IOException{
+		
+		
 		int opcao;
 		int infectadosInicial;
 		double taxaInfeccao;
 		double periodo;
 		String resultado;
 
+
 		Scanner entrada = new Scanner(System.in);
 		MenuPrincipal menu = new MenuPrincipal(entrada);
 		CalculadoraCovid calculadora = new CalculadoraCovid(entrada);
 		Diagnostico diagnostico = new Diagnostico(entrada);
+		
+		menu.introducao();
+		
 
 		// looping do programa
 		do {
@@ -37,6 +43,8 @@ public class JavaPrevine {
 						
 						resultado = calculadora.contagio(periodo);
 						System.out.println(resultado);
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 
 						break;
 
@@ -49,6 +57,8 @@ public class JavaPrevine {
 
 						resultado = calculadora.contagio(infectadosInicial, periodo);
 						System.out.println(resultado);
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 						
 						break;
 
@@ -64,13 +74,15 @@ public class JavaPrevine {
 						resultado = calculadora.contagio(infectadosInicial, taxaInfeccao, periodo);
 						System.out.println(resultado);
 						System.out.println();
+						System.out.println("\nPressione enter para voltar ao inicio.");
+						System.in.read();
 
 						break;
 
 					// Sair
 					case 0:
 
-						System.out.println("AUA FUI!");
+						System.out.println("Você saiu.");
 						
 
 						break;
@@ -86,14 +98,18 @@ public class JavaPrevine {
 
 			// Diagnostico
 			case 2:
-				System.out.println("Bem vindo ao Diagn�stico");
+				menu.introducaoDiagnostico();
+				
+				System.out.println("-Bem vindo ao Diagn�stico\n\n");
 				System.out.println(diagnostico.resultadoFinal());
+				System.out.println("\nPressione enter para voltar ao inicio.");
+				System.in.read();
 				break;
 
 			// Sair
 			case 0:
 
-				System.out.println("AUA FUI!");
+				System.out.println("Você saiu.");
 
 				break;
 
